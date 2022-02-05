@@ -227,7 +227,7 @@ Definition typecheck_error (e: tc_error) : Prop := False.
 Global Opaque typecheck_error.
 
 (* Somehow, this fixes a universe collapse issue that will occur if fool is not defined. *)
-Definition fool := @map _ Type (fun it : ident * type => mpred).
+(*Definition fool := @map _ Type (fun it : ident * type => mpred).*)
 
 Fixpoint denote_tc_assert {CS: compspecs} (a: tc_assert) : environ -> mpred :=
   match a with
